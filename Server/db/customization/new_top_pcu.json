@@ -1,0 +1,37 @@
+{
+	"_id": "new_top_pcu",
+	"_name": "new_top_pcu",
+	"_parent": "5cc0868e14c02e000c6bea68",
+	"_type": "Item",
+	"_props": {
+		"Name": "new_top_pcu",
+		"ShortName": "new_top_pcu",
+		"Description": "new_top_pcu",
+		"Side": [
+			"Savage",
+			"Usec",
+			"Bear"
+		],
+		"BodyPart": "Body",
+		"Prefab": {
+			"path": "assets/content/characters/character/prefabs/new_top_pcu.bundle",
+			"rcid": ""
+		},
+		"WatchPrefab": {
+			"path": "",
+			"rcid": ""
+		},
+		"IntegratedArmorVest": false,
+		"WatchPosition": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"WatchRotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		}
+	},
+	"_proto": "5cdea33e7d6c8b0474535dac"
+}

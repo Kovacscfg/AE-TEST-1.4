@@ -1,0 +1,29 @@
+{
+    "name": "Punisher",
+    "author": "Kovacs",
+    "description": "Punisher gear/weapon set",
+    "license": "MIT",
+    "version": "1.0.0",
+    "checkUpdateUrl": "",
+    "autoUpdate": true,
+    "res": {
+        "bundles": {
+            "folders": [
+                "bundles"
+            ]
+        }
+    },
+    "src": {
+        "src/modloader.js": "CacheModLoad"
+    },
+    "folders": [
+        "files/assort/ragfair",
+        "files/items",
+        "files/locales/en",
+        "files/templates"
+    ],
+    "filenames": [
+        "punisher_armor",
+        "punisher_slick"
+    ]
+}

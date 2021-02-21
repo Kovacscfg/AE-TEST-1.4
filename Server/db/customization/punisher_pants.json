@@ -1,0 +1,35 @@
+{
+	"_id": "punisher_pants",
+	"_name": "punisher_pants",
+	"_parent": "5cc0869814c02e000a4cad94",
+	"_type": "Item",
+	"_props": {
+		"Name": "punisher_pants",
+		"ShortName": "punisher_pants",
+		"Description": "punisher_pants",
+		"Side": [
+			"Bear"
+		],
+		"BodyPart": "Feet",
+		"Prefab": {
+			"path": "assets/content/characters/character/prefabs/pants_usec_urbanresponder.bundle",
+			"rcid": ""
+		},
+		"WatchPrefab": {
+			"path": "",
+			"rcid": ""
+		},
+		"IntegratedArmorVest": false,
+		"WatchPosition": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"WatchRotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		}
+	},
+	"_proto": "5cc085bb14c02e000e67a5c5"
+}

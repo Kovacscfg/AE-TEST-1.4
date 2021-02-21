@@ -1,0 +1,142 @@
+0 AssetBundle Base
+ 1 string m_Name = "assets/content/characters/character/prefabs/punisher_pants.bundle"
+ 0 vector m_PreloadTable
+  1 Array Array (26 items)
+   0 int size = 26
+   [0]
+    0 PPtr<Object> data
+     0 int m_FileID = 1
+     0 SInt64 m_PathID = 8646871023065948827
+   [1]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = -8961890153606984313
+   [2]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = -7888917194429829131
+   [3]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = -7577921107562850223
+   [4]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = -6682333073712046180
+   [5]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = -6028952075465409224
+   [6]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = -4641513620430385291
+   [7]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = -4396991744431425276
+   [8]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = -3859300793992854663
+   [9]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = -2400479008891210338
+   [10]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = 373572926044998229
+   [11]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = 1010450370406649413
+   [12]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = 3784816351053378616
+   [13]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = 4824648249396218091
+   [14]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = 4843334140479331371
+   [15]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = 5532119069430322387
+   [16]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = 5747539948836820204
+   [17]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = 5881555061223214097
+   [18]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = 6916434449545590825
+   [19]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = 7068578630275632420
+   [20]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = 7232289147117100809
+   [21]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = 7913703186912975283
+   [22]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = 8804105830624993532
+   [23]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = 9053372684312227350
+   [24]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = 9146036881506820973
+   [25]
+    0 PPtr<Object> data
+     0 int m_FileID = 2
+     0 SInt64 m_PathID = 1052853038577482737
+ 0 map m_Container
+  0 Array Array (1 items)
+   0 int size = 1
+   [0]
+    0 pair data
+     1 string first = "assets/content/characters/character/prefabs/punisher_pants.prefab"
+     0 AssetInfo second
+      0 int preloadIndex = 0
+      0 int preloadSize = 26
+      0 PPtr<Object> asset
+       0 int m_FileID = 0
+       0 SInt64 m_PathID = 5747539948836820204
+ 0 AssetInfo m_MainAsset
+  0 int preloadIndex = 0
+  0 int preloadSize = 0
+  0 PPtr<Object> asset
+   0 int m_FileID = 0
+   0 SInt64 m_PathID = 0
+ 0 unsigned int m_RuntimeCompatibility = 1
+ 1 string m_AssetBundleName = "assets/content/characters/character/prefabs/punisher_pants.bundle"
+ 0 vector m_Dependencies
+  1 Array Array (2 items)
+   0 int size = 2
+   [0]
+    1 string data = "shaders"
+   [1]
+    1 string data = "cubemaps"
+ 1 bool m_IsStreamedSceneAssetBundle = false
+ 0 int m_ExplicitDataLayout = 0
+ 0 int m_PathFlags = 7
+ 0 map m_SceneHashes
+  0 Array Array (0 items)
+   0 int size = 0

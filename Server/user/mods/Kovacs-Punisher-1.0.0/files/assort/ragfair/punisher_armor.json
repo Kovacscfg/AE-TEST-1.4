@@ -1,0 +1,10 @@
+{
+	"_id": "punisher_armor",
+	"_tpl": "punisher_armor",
+	"parentId": "hideout",
+	"slotId": "hideout",
+	"upd": {
+		"UnlimitedCount": true,
+		"StackObjectsCount": 99999999
+	}
+}

@@ -1,0 +1,35 @@
+{
+	"_id": "new_pants_bluezaslon",
+	"_name": "new_pants_bluezaslon",
+	"_parent": "5cc0869814c02e000a4cad94",
+	"_type": "Item",
+	"_props": {
+		"Name": "new_pants_bluezaslon",
+		"ShortName": "new_pants_bluezaslon",
+		"Description": "new_pants_bluezaslon",
+		"Side": [
+			"Bear"
+		],
+		"BodyPart": "Feet",
+		"Prefab": {
+			"path": "assets/content/characters/character/prefabs/new_pants_bluezaslon.bundle",
+			"rcid": ""
+		},
+		"WatchPrefab": {
+			"path": "",
+			"rcid": ""
+		},
+		"IntegratedArmorVest": false,
+		"WatchPosition": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"WatchRotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		}
+	},
+	"_proto": "5cc085bb14c02e000e67a5c5"
+}

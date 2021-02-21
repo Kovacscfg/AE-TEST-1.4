@@ -1,0 +1,10 @@
+{
+	"_id": "marks_mask",
+	"_tpl": "marks_mask",
+	"parentId": "hideout",
+	"slotId": "hideout",
+	"upd": {
+		"UnlimitedCount": true,
+		"StackObjectsCount": 99999999
+	}
+}

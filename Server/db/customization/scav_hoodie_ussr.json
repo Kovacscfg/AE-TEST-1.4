@@ -1,0 +1,37 @@
+{
+	"_id": "scav_hoodie_ussr",
+	"_name": "scav_hoodie_ussr",
+	"_parent": "5cc0868e14c02e000c6bea68",
+	"_type": "Item",
+	"_props": {
+		"Name": "scav_hoodie_ussr",
+		"ShortName": "scav_hoodie_ussr",
+		"Description": "scav_hoodie_ussr",
+		"Side": [
+			"Savage",
+			"Usec",
+			"Bear"
+		],
+		"BodyPart": "Body",
+		"Prefab": {
+			"path": "assets/content/characters/character/prefabs/scav_hoodie_ussr.bundle",
+			"rcid": ""
+		},
+		"WatchPrefab": {
+			"path": "",
+			"rcid": ""
+		},
+		"IntegratedArmorVest": false,
+		"WatchPosition": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"WatchRotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		}
+	},
+	"_proto": "5cdea33e7d6c8b0474535dac"
+}
