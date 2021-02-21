@@ -80,7 +80,7 @@
 			"BackgroundColor": "green",
 			"Width": 1,
 			"Height": 1,
-			"StackMaxSize": 500000,
+			"StackMaxSize": 10000000,
 			"Rarity": "Common",
 			"SpawnChance": 50,
 			"CreditsPrice": 0,
