@@ -2,6 +2,8 @@
 /*
 can accept node as object{array[variable]} or object{object[array]variable} or object{variable}
 */
+// bots.js - Orginially written by TheMaoci - Edited for new AI by Kovacs
+
 function getRandomValue(node) {
 	let keys = Object.keys(node);
 	let randomizedObject;
@@ -113,29 +115,29 @@ function generateBot(bot, role, sessionID) {
 	let node = {};
 
 
-		// we don't want player scav to be generated as PMC
-		if (role === "playerScav") {
-			type = "assault";
-		}
+	// we don't want player scav to be generated as PMC
+	if (role === "playerScav") {
+		type = "assault";
+	}
 
-			// New Scav Generator
+	// New Scav Generator
 	if (role === "assault") {
-		role = "assault"
+		//role = "assault"
+		let ScavSwitch = utility.getRandomInt(1,3);
+		switch (ScavSwitch) 
+		{
+			case 1:
+				role = "followerGluharAssault"
+			break
+			case 2:
+				role = "followerGluharSecurity"
+			break
+			case 3:
+				role = "followerGluharScout"
+			break
+		}
 	}
-	let ScavSwitch = utility.getRandomInt(1,3);
-	switch (ScavSwitch) 
-	{
-	case 1:
-		role = "followergluharassault"
-	break
-	case 2:
-		role = "followergluharsecurity"
-	break
-	case 3:
-		role = "followergluharscout"
-	break
-	}
-
+	
 	if ((type === "assault") && global._database.gameplayConfig.bots.pmc.enabled) {
 		let spawnChance = utility.getRandomInt(0, 99);
 		let sideChance = utility.getRandomInt(0, 99);
@@ -154,65 +156,47 @@ function generateBot(bot, role, sessionID) {
 	}
 
 	if (role === "usec") {
-		role = "usec"
+		//role = "usec"
+		// Roll for Usec Tactics
+		bot.Info.Settings.Role = "pmcBot";	
+		let usecTypeSelect = utility.getRandomInt(1,3);
+
+		switch (usecTypeSelect) {
+			case 1:
+				role = "pmcBot"
+			break
+			case 2:
+				role = "bossKojaniy"
+			break
+			case 3: 
+				role = "bossSanitar"
+			break
+			case 4:
+				role = "bossGluhar"
+				break
+		}
 	}
+			// Roll for Bear Tactics
+	if (role === "bear") {
+		//role = "bear"
+		bot.Info.Settings.Role = "pmcBot";	
+		let bearTypeSelect = utility.getRandomInt(1,4);
 
-			bot.Info.Settings.Role = "pmcBot";	
-			let usecTypeSelect = utility.getRandomInt();
-
-			switch (usecTypeSelect) {
-				case 1:
-					role = "pmcbot"
-				break
-				case 2:
-					role = "bossgluhar"
-				break
-				case 3:
-					role = "bosskilla"
-				break
-				case 4:
-					role = "bosskojaniy"
-				break
-				case 5:
-					role = "bosssanitar"
-				break
-				case 6:
-					role = "bossbully"
-				break
-			}
-
-
-			if (role === "bear") {
-				role = "bear"
-			}
-		
-					bot.Info.Settings.Role = "pmcBot";	
-					let bearTypeSelect = utility.getRandomInt();
-		
-					switch (bearTypeSelect) {
-						case 1:
-							role = "pmcbot"
-						break
-						case 2:
-							role = "bossgluhar"
-						break
-						case 3:
-							role = "bosskilla"
-						break
-						case 4:
-							role = "bosskojaniy"
-						break
-						case 5:
-							role = "bosssanitar"
-						break
-						case 6:
-							role = "bossbully"
-						break
-					}
-			
-
-
-
+		switch (bearTypeSelect) {
+			case 1:
+				role = "pmcBot"
+			break
+			case 2:
+				role = "followerBully"
+			break
+			case 3:
+				role = "followerGluharAssault"
+			break
+			case 4:
+				role = "bossKilla"
+			break
+		}
+	}
 	// generate bot
 	node = db.bots[type.toLowerCase()];
 	let appearance = fileIO.readParsed(node.appearance);
