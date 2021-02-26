@@ -55,30 +55,6 @@ function getRandomExperience() {
 	return exp;
 }
 
-
-function addDogtag(bot, sessionID) {
-	let dogtagItem = {
-		_id: utility.generateNewItemId(),
-		_tpl: ((bot.Info.Side === 'Usec') ? "59f32c3b86f77472a31742f0" : "59f32bb586f774757e1e8442"),
-		parentId: bot.Inventory.equipment,
-		slotId: "Dogtag",
-		upd: {
-			"Dogtag": {
-				"Nickname": bot.Info.Nickname,
-				"Side": bot.Info.Side,
-				"Level": bot.Info.Level,
-				"Time": (new Date().toISOString()),
-				"Status": "Killed by ",
-				"KillerName": "Unknown",
-				"WeaponName": "Unknown"
-			}
-		}
-	}
-
-	bot.Inventory.items.push(dogtagItem);
-	return bot;
-}
-
 function generateHealth(selectedHealth){
 	let HealthBase = {"Hydration":{"Current":100,"Maximum":100},"Energy":{"Current":100,"Maximum":100},"BodyParts":{"Head":{"Health":{"Current":35,"Maximum":35}},"Chest":{"Health":{"Current":80,"Maximum":80}},"Stomach":{"Health":{"Current":70,"Maximum":70}},"LeftArm":{"Health":{"Current":60,"Maximum": 60}},"RightArm":{"Health":{"Current":60,"Maximum": 60}},"LeftLeg":{"Health":{"Current": 65,"Maximum": 65}},"RightLeg":{"Health":{"Current": 65,"Maximum": 65}}},"UpdateTime": 1598664622};
 	let bodyparts = ["Head","Chest","Stomach","LeftArm","RightArm","LeftLeg","RightLeg"];
@@ -109,12 +85,58 @@ function generateHealth(selectedHealth){
 	return HealthBase;
 }
 
+function addDogtag(bot, sessionID) {
+	let dogtagItem = {
+		_id: utility.generateNewItemId(),
+		_tpl: ((bot.Info.Side === 'Usec') ? "59f32c3b86f77472a31742f0" : "59f32bb586f774757e1e8442"),
+		parentId: bot.Inventory.equipment,
+		slotId: "Dogtag",
+		upd: {
+			"Dogtag": {
+				"Nickname": bot.Info.Nickname,
+				"Side": bot.Info.Side,
+				"Level": bot.Info.Level,
+				"Time": (new Date().toISOString()),
+				"Status": "Killed by ",
+				"KillerName": "Unknown",
+				"WeaponName": "Unknown"
+			}
+		}
+	}
+
+	bot.Inventory.items.push(dogtagItem);
+	return bot;
+}
+
 function generateBot(bot, role, sessionID) {
 	let type = (role === "cursedAssault") ? "assault" : role;
-    let node = {};
+	let node = {};
 
-	// chance to spawn simulated PMC AIs
-	if ((type === "followergluharassault") && global._database.gameplayConfig.bots.pmc.enabled) {
+
+		// we don't want player scav to be generated as PMC
+		if (role === "playerScav") {
+			type = "assault";
+		}
+
+			// New Scav Generator
+	if (role === "assault") {
+		role = "assault"
+	}
+	let ScavSwitch = utility.getRandomInt(1,3);
+	switch (ScavSwitch) 
+	{
+	case 1:
+		role = "followergluharassault"
+	break
+	case 2:
+		role = "followergluharsecurity"
+	break
+	case 3:
+		role = "followergluharscout"
+	break
+	}
+
+	if ((type === "assault") && global._database.gameplayConfig.bots.pmc.enabled) {
 		let spawnChance = utility.getRandomInt(0, 99);
 		let sideChance = utility.getRandomInt(0, 99);
 
@@ -127,14 +149,70 @@ function generateBot(bot, role, sessionID) {
 				type = "bear";
 			}
 
-			bot.Info.Level = utility.getRandomInt(1, 70);
+			bot.Info.Level = utility.getRandomInt(1,70);
 		}
 	}
-	
-	// we don't want player scav to be generated as PMC
-	if (role === "playerScav") {
-		type = "assault";
+
+	if (role === "usec") {
+		role = "usec"
 	}
+
+			bot.Info.Settings.Role = "pmcBot";	
+			let usecTypeSelect = utility.getRandomInt();
+
+			switch (usecTypeSelect) {
+				case 1:
+					role = "pmcbot"
+				break
+				case 2:
+					role = "bossgluhar"
+				break
+				case 3:
+					role = "bosskilla"
+				break
+				case 4:
+					role = "bosskojaniy"
+				break
+				case 5:
+					role = "bosssanitar"
+				break
+				case 6:
+					role = "bossbully"
+				break
+			}
+
+
+			if (role === "bear") {
+				role = "bear"
+			}
+		
+					bot.Info.Settings.Role = "pmcBot";	
+					let bearTypeSelect = utility.getRandomInt();
+		
+					switch (bearTypeSelect) {
+						case 1:
+							role = "pmcbot"
+						break
+						case 2:
+							role = "bossgluhar"
+						break
+						case 3:
+							role = "bosskilla"
+						break
+						case 4:
+							role = "bosskojaniy"
+						break
+						case 5:
+							role = "bosssanitar"
+						break
+						case 6:
+							role = "bossbully"
+						break
+					}
+			
+
+
+
 	// generate bot
 	node = db.bots[type.toLowerCase()];
 	let appearance = fileIO.readParsed(node.appearance);
@@ -151,14 +229,14 @@ function generateBot(bot, role, sessionID) {
 	bot.Customization.Hands = getRandomValue(appearance.hands);
 	bot.Inventory = getRandomValue(node.inventory);
 
+	let itemsByParentHash = {};
+	let inventoryItemHash = {};
+	let inventoryId = "";
+
 	// add dogtag to PMC's	
 	if (type === "usec" || type === "bear") {
 		bot = addDogtag(bot, sessionID);
 	}
-
-	let itemsByParentHash = {};
-	let inventoryItemHash = {};
-	let inventoryId = "";
 
 	//Generate inventoryItem list
 	for (let i in bot.Inventory.items) {
@@ -235,6 +313,7 @@ function generatePlayerScav() {
 	scavData[0].Info.Settings = {};
 	return scavData[0];
 }
+
 
 module.exports.generate = generate;
 module.exports.generatePlayerScav = generatePlayerScav;

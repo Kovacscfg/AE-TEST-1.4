@@ -2,12 +2,12 @@
    "Hydration": 100,
    "Energy": 100,
    "BodyParts":{
-      "Head": 35,
-      "Chest": 80,
-      "Stomach": 70,
-      "LeftArm": 60,
-      "RightArm": 60,
-      "LeftLeg": 65,
-      "RightLeg": 65
+      "Head": 70,
+      "Chest": 160,
+      "Stomach": 140,
+      "LeftArm": 120,
+      "RightArm": 120,
+      "LeftLeg": 130,
+      "RightLeg": 130
    }
 }

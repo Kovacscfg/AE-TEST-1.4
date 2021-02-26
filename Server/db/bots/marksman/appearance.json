@@ -1,10 +1,5 @@
 {
 	"body": [
-		"scav_hoodie_ussr",
-		"scav_parka",
-		"new_top_pcu",
-		"new_combatshirt",
-		"new_nightpatrol",
 		"5cc2e59214c02e000f16684e",
 		"5cde9f337d6c8b0474535da8",
 		"5d28ad6986f77429275dba22",
@@ -14,11 +9,6 @@
 		"5e9da1d086f774054a667134"
 	],
 	"feet": [
-		"new_pants_bluezaslon",
-		"new_pants_greencamo",
-		"new_pants_shturman_1",
-		"new_pants_shturman_2",
-		"new_scav_pants_1",
 		"5cc2e5d014c02e15d53d9c03",
 		"5cde9fb87d6c8b0474535da9",
 		"5d28af3486f774292364a6e7",
@@ -33,9 +23,7 @@
 	"head": [
 		"5cc2e4d014c02e000d0115f8",
 		"5cde9ff17d6c8b0474535daa",
-		"5d28afe786f774292668618d",
-		"5e99767c86f7741ac7399393",
-		"5cde96047d6c8b20b577f016"
+		"5d28afe786f774292668618d"
 	],
 	"voice": [
 		"scav_1",
